@@ -1,0 +1,17 @@
+{
+    "files.associations": {
+        "iostream": "cpp",
+        "*.tcc": "cpp",
+        "string": "cpp",
+        "cmath": "cpp",
+        "ostream": "cpp",
+        "sstream": "cpp",
+        "regex": "cpp",
+        "thread": "cpp",
+        "array": "cpp",
+        "string_view": "cpp",
+        "bitset": "cpp",
+        "chrono": "cpp",
+        "algorithm": "cpp"
+    }
+}
