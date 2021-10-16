@@ -55,7 +55,7 @@ public:
 using namespace std;
 int main()
 {
-
+  
     srand(time(NULL));
     system("cls");
     space(50);
