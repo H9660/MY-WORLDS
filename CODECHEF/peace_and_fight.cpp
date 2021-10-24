@@ -1,19 +1,18 @@
 #include <iostream>
 #include<limits.h>
-#define max INT_MIN
 using namespace std;
 
+int maxm=INT_MIN; // variable to store the highest score
 
-void findmax(int arr[],int n)
+void findmax(int arr[],int n)  
 {
     int i=0;
      while(i<n)
 	    {
-	        if(max<arr[i])
-	        max=arr[i];
+	        if(arr[i]>maxm)
+	        maxm=arr[i];
 	        i++;
 	    }
-	    
 }
 
 int retcount(int arr[],int n)
@@ -21,8 +20,9 @@ int retcount(int arr[],int n)
     int i=0,count=0;
     while(i<n)
     {
-        if(arr[i]==max)
+        if(arr[i]==maxm)
         count++;
+        i++;
     }
     return count;
 }
@@ -42,8 +42,12 @@ int main()
 	    }
 	  
 	    findmax(arr,n);
-        if(retcount>1)
-        cout<<""
+	    
+        if(retcount(arr,n)>1)
+        cout<<"peace:)"<<"\n";
+        else
+        cout<<"fight:("<<"\n";
+        
 	    i=0;
 	}
 	
