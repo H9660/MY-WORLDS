@@ -50,7 +50,7 @@ int main()
     cin >> size;
 
     cout << "ENTER THE QUEUE ELEMENTS :" << endl;
-    for (size_t i = 0; i < size; i++)
+    for (int i = 0; i < size; i++)
     {
         cin >> val;
         en(a, val);

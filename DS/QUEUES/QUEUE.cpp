@@ -7,7 +7,7 @@ public:
     int size;
     int f;
     int b;
-    int *arr;
+    int arr[10000];
 } a;
 
 int isempty(queue &a)
@@ -19,13 +19,20 @@ int isempty(queue &a)
     else
         return 0;
 }
-int isfull(queue &A)
+int isfull(queue &a)
 {
-    if (A.b == A.size)
+    if (a.b == a.size)
     {
         return 1;
     }
     return 0;
+}
+
+void enqueue(int value, queue &a)
+{
+    a.size++;
+    a.b++;
+    a.arr[a.b] = value;
 }
 void dequeue(queue &a)
 {
@@ -40,7 +47,7 @@ void dequeue(queue &a)
         }
         a.b--;
         cout << "THE DEQUEUED QUEUE IS:" << endl;
-        for (size_t i = a.f; i < a.size - 1; i++)
+        for (int i = a.f; i < a.size - 1; i++)
         {
             cout << a.arr[i];
             cout << "\t";
@@ -81,21 +88,29 @@ void peeA(queue &a, int ele)
     }
 }
 
+void display()
+{
+    int i = a.f+1;
+    while (i <=a.b)
+    {
+        cout << a.arr[i] << "\t";
+        i++;
+    }
+}
 int main()
 {
     char cA;
-    int ch;
+    int ch, value;
     cin >> a.size;
     a.f = a.b = -1;
-    a.arr = new int[a.size];
-    while (a.b + 1 < a.size)
+    while (a.b < a.size - 1)
     {
         a.b++;
         cin >> a.arr[a.b];
     }
 
     cout << "THE QUEUE IS: " << endl;
-    for (size_t i = 0; i < a.size; i++)
+    for (int i = 0; i < a.size; i++)
 
     {
         cout << a.arr[i] << "\t";
@@ -105,11 +120,21 @@ int main()
     do
     {
         cout << "LIST OF OPERATIONS!" << endl;
+        cout << "0. ENQUEUE" << endl;
         cout << "1. DEQUEUE" << endl;
         cout << "2. PEEK " << endl;
+        cout << "3. DISPLAY" << endl;
         cin >> ch;
         switch (ch)
         {
+
+        case 0:
+        {
+            cout<<"ENTER THE ELEMENT TO BE ENQUEUED!"<<"\n";
+            cin >> value;
+            enqueue(value, a);
+            break;
+        }
         case 1:
             dequeue(a);
             break;
@@ -121,6 +146,14 @@ int main()
             peeA(a, ele);
             break;
         }
+
+        case 3:
+        {
+            display();
+            cout<<"\n";
+            break;
+        }
+
         }
         cout << "WANT TO OPERATE MORE?" << endl;
         cin >> cA;

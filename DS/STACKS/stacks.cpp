@@ -105,7 +105,7 @@ void stacA::stacAdelpos(stacA &a, int d)
     if (flag == 0)
         cout << "THERE IS NO SUCH ELEMENT!" << endl;
     cout << "THE STACK AFTER DELETION IS: " << endl;
-    for (int i = a.s; i > 0; i++)
+    for (int i = a.s; i > 0; i--)
     {
         cout << a.arr[i] << "\t";
     }
