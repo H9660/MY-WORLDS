@@ -1,31 +1,4 @@
-
-
-#include <iostream>
-#include <string.h>
-#include <stack>
-
-using namespace std;
-
-int pred(char a)
-{
-    if (a == '+' || a == '-')
-        return 1;
-
-    if (a == '/' || a == '*')
-        return 2;
-
-    if (a == '^')
-        return 3;
-    return 0;
-}
-
-int main()
-{
-    stack<char> s;
-    string infix;
-    string postfix = "";
-    getline(cin, infix);
-    for (int i = 0; i < infix.length(); i++)
+ for (int i = 0; i < infix.length(); i++)
     {
         if ((infix[i] >= 'A' && infix[i] <= 'Z') || (infix[i] >= 'a' && infix[i] <= 'z'))
             postfix += infix[i];
@@ -52,7 +25,7 @@ int main()
                 postfix += s.top();
                 s.pop();
             }
-A – B C / D * E + F % G *
+
             s.push(infix[i]);
         }
     }
@@ -62,7 +35,3 @@ A – B C / D * E + F % G *
         postfix += s.top();
         s.pop();
     }
-
-    cout << postfix << endl;
-    return 0;
-}

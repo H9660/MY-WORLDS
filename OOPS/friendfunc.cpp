@@ -22,7 +22,7 @@ class complex{
      static void  total()
      {
          
-         cout<<"THE TOTAL COMPLEX NUMBER TO BEADDEDARE:"<<"\n"<<a<<endl;
+         cout<<"THE TOTAL COMPLEX NUMBER TO BE ADDED ARE:"<<"\n"<<a<<endl;
          
      }
 

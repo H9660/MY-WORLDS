@@ -1,14 +1,14 @@
 #include <iostream>
 #include <string.h>
 using namespace std;
-classA
+class A
 {
 public:
-intA;
-    virtual voidAbc()=0;
+int A;
+    virtual void abc()=0;
 };
 
-class B : publicA
+class B : public A
 {
 
 public:
@@ -19,11 +19,11 @@ public:
 };
 
 int main()
-{ AA;
+{ A a;
 
     B b;
-  A=&b;
-A->abc();
+  a=b;
+a.abc();
 
     //Add function=0 to maAe pure function
 

@@ -1,2 +1,1 @@
-
-   A=x;
+ // child1.p = new int;
