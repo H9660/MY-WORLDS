@@ -1,95 +1,30 @@
-#include <iostream>
-#include <string.h>
+// C++ program to print largest contiguous array sum
+#include<iostream>
+#include<climits>
 using namespace std;
-int kadane(int arr[], int n)
+
+int maxSubArraySum(int a[], int size)
 {
-    int max_sum = INT_MIN;
-    int curr_sum = 0;
-    int flag = 0;
-    int i = 0;
-    int s = 0, e;
+	int max_so_far = INT_MIN, max_ending_here = 0;
 
-    while (i < n)
-    {
-        if (arr[i] < 0)
-            flag = 1;
+	for (int i = 0; i < size; i++)
+	{
+		max_ending_here = max_ending_here + a[i];
+		if (max_so_far < max_ending_here)
+			max_so_far = max_ending_here;
 
-        else
-            flag = 0;
-
-        i++;
-    }
-
-    i = 0;
-
-    if (flag == 1)
-    {
-        while (i < n)
-        {
-            curr_sum += arr[i];
-            if (curr_sum < 0)
-            {
-                curr_sum = 0;
-                s = i + 1;
-            }
-
-            if (max_sum < curr_sum)
-            {
-                max_sum = curr_sum;
-                e = i;
-                s = s;
-            }
-
-            i++;
-        }
-    }
-
-    else
-    {
-        i = 0;
-        curr_sum = arr[0];
-        max_sum = INT_MIN;
-        while (i < n)
-        {
-            // curr_sum += arr[i];
-            if (curr_sum < curr_sum + arr[i])
-            {
-                curr_sum = curr_sum + arr[i];
-                s = i + 1;
-            }
-            else
-                curr_sum = arr[i];
-
-            max_sum = max(max_sum, curr_sum);
-            {
-                e = i;
-                s = s;
-            }
-
-            i++;
-        }
-    }
-
-    cout << "STARTING INDEX: " << s << endl;
-    cout << "ENDING INDEX: " << e << endl;
-
-    return max_sum;
+		if (max_ending_here < 0)
+			max_ending_here = 0;
+	}
+	return max_so_far;
 }
 
+/*Driver program to test maxSubArraySum*/
 int main()
-
 {
-    int n;
-    cin >> n;
-    int *arr = new int[n];
-    int i = 0;
-    while (i < n)
-    {
-        cin >> arr[i];
-        i++;
-    }
-
-    int sum = kadane(arr, n);
-    cout << sum << endl;
-    return 0;
+	int a[] = {-2, -3, 4, -1, -2, 1, 5, -3};
+	int n = sizeof(a)/sizeof(a[0]);
+	int max_sum = maxSubArraySum(a, n);
+	cout << "Maximum contiguous sum is " << max_sum;
+	return 0;
 }

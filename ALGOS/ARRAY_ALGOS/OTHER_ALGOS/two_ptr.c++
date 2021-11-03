@@ -28,7 +28,6 @@ int main()
         {
             fi = i;
             fj = j;
-            flag = 1;
             cout << "->"
                  << "( " << fi << " , " << fj << " )" << endl;
         }
@@ -43,5 +42,7 @@ int main()
     }
 
     cout << "PRESS ENTER TO CONTINUE" << endl;
+    getchar();
     return 0;
 }
+
