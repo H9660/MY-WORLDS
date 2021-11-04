@@ -1,1 +1,2 @@
- // child1.p = new int;
+ // int a;
+    // int b;

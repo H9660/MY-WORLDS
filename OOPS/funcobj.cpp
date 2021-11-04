@@ -1,30 +1,27 @@
 #include<iostream>
 #include<string.h>
+#include<functional>
+#include<algorithm>
 using namespace std;
-
-class b{
-
-    public:
-    int c=10;
-    void sum(b A, b a)
-    { 
-
-         cin>>A.c>>a.c;
-          this-> c+= A.c;
-
-       cout<<"THE VALUE OF THIS OBJECT'S C USING FUNCTION IS"<<"\n"<<c;
-
-      
-
-    }
-};
-
 int main()
-{   
-
- b x,y,z;
-x.sum(y, z);
-
+{
+int arr[10];
+int i=0;
+while(i<10)
+{
+    cin>>arr[i];
+    i++;
+}
+i=0;
+// sort(10,20, logical_and<int>(10,20));
+cout<<logical_and<int>(10,20);
+cout<<"\n";
+}
+while(i<10)
+{
+    cout<<arr[i]<<" ";
+    i++;
+}
 
 return 0;
 }

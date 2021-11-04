@@ -11,9 +11,9 @@ class complex{
          i=y;
      A++;
        }
-     static intA;
+     static int a;
 
-    friend complexAdd(complex N1, complex N2);
+    friend complex Add(complex N1, complex N2);
    
      
 
@@ -28,7 +28,7 @@ class complex{
 
 
 };
-complexAdd(complex N1, complex N2)
+complex Add(complex N1, complex N2)
      {
    complex f;
    f.r=N1.r + N2.r;
