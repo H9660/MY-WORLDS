@@ -12,7 +12,7 @@ using namespace std;
 int main()
 {
     int i, j, k;
-    long long n=100;                       // PATTERN IS BEST WHEN THE VALUES OF N ARE ODD
+    long long n=150;                       // PATTERN IS BEST WHEN THE VALUES OF N ARE ODD
     char arr[n][n];
 
     for (i = 0; i < n; i++)

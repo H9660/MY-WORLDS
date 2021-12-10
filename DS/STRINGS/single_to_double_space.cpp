@@ -6,7 +6,7 @@ int main()
 {
     vector<char> vect;
     string str;
-    getline(cin, str);
+    getline(cin,str);
     int i = 0;
     while (i < str.length())
     {
@@ -21,9 +21,7 @@ int main()
         }
         i++;
     }
-
     i = 0;
-    
     while (i < vect.size())
     {
         cout << vect[i];

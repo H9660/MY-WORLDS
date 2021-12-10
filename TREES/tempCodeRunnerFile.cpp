@@ -1,0 +1,1 @@
+/* A node contains the value, left and right pointers */

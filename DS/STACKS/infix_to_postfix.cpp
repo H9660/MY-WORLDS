@@ -1,5 +1,3 @@
-
-
 #include <iostream>
 #include <string.h>
 #include <stack>
@@ -52,7 +50,6 @@ int main()
                 postfix += s.top();
                 s.pop();
             }
-A – B C / D * E + F % G *
             s.push(infix[i]);
         }
     }

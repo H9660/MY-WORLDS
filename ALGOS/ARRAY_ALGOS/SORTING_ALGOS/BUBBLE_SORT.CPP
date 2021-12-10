@@ -22,6 +22,13 @@ void bubsort(int arr[], int n)         // bubsort takes at most n(n-1)/2 swaps
                 count++;
             }
         }
+
+        //  for (int c = 0; c < n; c++)
+        // {
+
+        //     cout << arr[c] << " ";
+        // }
+        // cout<<"\n";
     }
 }
 int main()

@@ -16,7 +16,7 @@ public:
 
         // cout << root->data << " ";      // preorder
         printtree(root->left);
-        // cout << root->data << " ";      // inorder
+        cout << root->data << " ";      // inorder
         printtree(root->right);
         // cout << root->data << " ";       // postorder
     }
@@ -30,7 +30,7 @@ public:
                 return 0;
             if (prev != NULL && root->data <= prev->data)
             {
-                return 0;;
+                return 0;
             }
             prev = root;
             isBST(root->right);
@@ -62,6 +62,6 @@ int main()
     n1->right = n4;
 
     root->printtree(root);
-    cout<<root->isBST(root);
+    cout << root->isBST(root);
     return 0;
 }

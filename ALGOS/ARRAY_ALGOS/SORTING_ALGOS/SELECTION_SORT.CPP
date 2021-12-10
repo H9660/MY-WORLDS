@@ -12,26 +12,30 @@ void selsort(int arr[], int n)
 {
     int i = 0;
     int j = 0;
+    int comp=0;
     int min;
-    while (i < n )
+    while (i < n)
     {
         min = i;
         for (j = i + 1; j < n; j++)
         {
             if (arr[j] < arr[min])
+            {
                 min = j;
+                comp++;
+            }
         }
         swap(arr[i], arr[min]);
 
-         for (int c = 0; c < n; c++)
+        for (int c = 0; c < n; c++)
         {
 
             cout << arr[c] << " ";
         }
-        cout<<"\n";
-        
+        cout << "\n";
         i++;
     }
+        cout<<"THE TOTAL USEFUL COMPARISIONS  MADE IN THIS SORTING ARE: "<<comp<<"\n";
 }
 
 int main()

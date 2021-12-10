@@ -1,10 +1,10 @@
 #include <iostream>
 using namespace std;
-int main()               // maximm it takes n*(n-1)/2 swaps;
-{ 
+int main() // maximm it takes n*(n-1)/2 swaps;
+{
     int n;
     int temp;
-     int count=0;
+    int count = 0;
 
     cout << "enter the size and array elements";
     cin >> n;
@@ -27,6 +27,13 @@ int main()               // maximm it takes n*(n-1)/2 swaps;
             j--;
         }
         arr[j + 1] = temp;
+
+        for (int c = 0; c < n; c++)
+        {
+
+            cout << arr[c] << " ";
+        }
+        cout<<"\n";
     }
     cout << "array after sorting" << endl;
     for (int c = 0; c < n; c++)
@@ -35,6 +42,6 @@ int main()               // maximm it takes n*(n-1)/2 swaps;
         cout << arr[c] << " ";
     }
 
-    cout<<count;
+    cout << count;
     return 0;
 }

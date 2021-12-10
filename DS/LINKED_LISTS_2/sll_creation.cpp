@@ -69,4 +69,3 @@ int main()
     return 0;
 }
 
-bool has_cycle()

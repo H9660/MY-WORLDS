@@ -14,7 +14,7 @@ public:
       
             // cout << root->data << " ";      // preorder 
             printtree(root->left);
-            // cout << root->data << " ";       // inorder
+            // cout << root->data << " ";      // inorder
             printtree(root->right);
             // cout << root->data << " ";       // postorder
          

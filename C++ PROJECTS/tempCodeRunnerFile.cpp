@@ -1,1 +1,1 @@
-srand(time(NULL));
+fizzard
