@@ -23,6 +23,13 @@ void selsort(int arr[], int n)
         }
         swap(arr[i], arr[min]);
 
+         for (int c = 0; c < n; c++)
+        {
+
+            cout << arr[c] << " ";
+        }
+        cout<<"\n";
+        
         i++;
     }
 }
